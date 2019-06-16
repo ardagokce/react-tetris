@@ -21,10 +21,10 @@ const TetrisBoard: React.FC<TetrisBoardProps> = (props) => {
   props.field.forEach((row, index) => {
     // creating columns
     const cols = row.map((column: any, index: number) =>
-    <div className={'col-${column}'} key={index} />)
+    <div className={`col-${column}`} key={index} />)
 
     rows.push(
-    <div className={"tetrisboard__row"} key={index}>cols}</div>)
+    <div className={"tetrisboard__row"} key={index}>{cols}</div>)
     })
 
     return (
